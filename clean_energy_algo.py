@@ -6,12 +6,11 @@ def run_clean_energy_algorithm():
 
  # Historical Closing Prices simulated over a timeline for calculation
  # representing consecutive trading cycles
- historical_prices = [
- 45.2, 45.8, 46.1, 45.9, 46.5, 47.2, 47.8, 48.1, 47.9, 48.5,
+ historical_prices = 
+ [45.2, 45.8, 46.1, 45.9, 46.5, 47.2, 47.8, 48.1, 47.9, 48.5,
  49.2, 49.8, 50.1, 49.5, 48.9, 48.2, 47.5, 46.8, 46.2, 45.5,
  44.8, 44.1, 43.5, 43.9, 44.2, 45.1, 46.3, 47.8, 49.5, 51.2,
- 52.8, 54.1, 55.5, 56.2, 55.8, 55.1, 54.3, 53.2, 52.1, 51.5
- ]
+ 52.8, 54.1, 55.5, 56.2, 55.8, 55.1, 54.3, 53.2, 52.1, 51.5]
 
  print(f"Processing {len(historical_prices)} periods of historical price data...")
  print("Computing Technical Indicators: 3-Period SMA vs 8-Period SMA...")
