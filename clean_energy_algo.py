@@ -1,6 +1,6 @@
 def run_clean_energy_algorithm():
  print("\n==================================================================")
- print("🔋 GREEN CAP_QUANT: ALGORITHMIC TRADING SIGNAL GENERATOR 🔋")
+ print("GREEN CAP_QUANT: ALGORITHMIC TRADING SIGNAL GENERATOR")
  print("Target Asset: iShares Global Clean Energy ETF (Ticker: ICLN)")
  print("==================================================================\n")
 
@@ -13,8 +13,8 @@ def run_clean_energy_algorithm():
  52.8, 54.1, 55.5, 56.2, 55.8, 55.1, 54.3, 53.2, 52.1, 51.5
  ]
 
- print(f"📊 Processing {len(historical_prices)} periods of historical price data...")
- print("⚙️ Computing Technical Indicators: 3-Period SMA vs 8-Period SMA...")
+ print(f"Processing {len(historical_prices)} periods of historical price data...")
+ print("Computing Technical Indicators: 3-Period SMA vs 8-Period SMA...")
  print("-" * 66)
 
  # To keep it lightweight without downloading giant tracking libraries,
@@ -34,14 +34,14 @@ def run_clean_energy_algorithm():
 
 # Check for Crossover Logic
   if short_ma > long_ma and previous_signal != "BUY":
-   print(f"🟢 [SIGNAL] Period {i+1}: GOLDEN CROSS detected!")
-   print(f"  👉 Action: BUY ICLN at ${current_price:.2f} | Short MA ({short_ma:.2f}) crossed above Long MA ({long_ma:.2f})")
+   print(f"[SIGNAL] Period {i+1}: GOLDEN CROSS detected!")
+   print(f"  Action: BUY ICLN at ${current_price:.2f} | Short MA ({short_ma:.2f}) crossed above Long MA ({long_ma:.2f})")
    print("-" * 66)
    previous_signal = "BUY"
 
   elif short_ma < long_ma and previous_signal != "SELL" and previous_signal != "HOLD":
-   print(f"🔴 [SIGNAL] Period {i+1}: DEATH CROSS detected!")
-   print(f"  👉 Action: SELL ICLN at ${current_price:.2f} | Short MA ({short_ma:.2f}) dropped below Long MA ({long_ma:.2f})")
+   print(f" [SIGNAL] Period {i+1}: DEATH CROSS detected!")
+   print(f"  Action: SELL ICLN at ${current_price:.2f} | Short MA ({short_ma:.2f}) dropped below Long MA ({long_ma:.2f})")
    print("-" * 66)
    previous_signal = "SELL"
 
